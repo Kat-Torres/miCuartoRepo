@@ -1,6 +1,5 @@
 import os
 
-from typing import Union
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -13,4 +12,9 @@ def get_familia():
 @app.get("/superheroesDC")
 def get_superheroes():
     rows = ["Superman", "Batman", "Flash", "Linterna Verde", "Mujer maravilla", "Aquaman", "Shazam", "Cyborg"]
+    return rows
+
+@app.get("/cursosPlatzi")
+def get_cursos(): 
+    rows = ["Docker", "Bash", "Linux", "Inglés","Python" , "Javascript", "Azure", "DevOps"]  
     return rows
